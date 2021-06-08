@@ -16,6 +16,7 @@ var cont=0;
 var boom=false;
 while(i<(100-16) && boom==false){
     var temp= prompt("inserisci un nuovo numero")
+    //quando si va ad inserire più volte lo stesso numero ti ferma solo la prima volta e le altre ti lascia passare 
     do{
         find=nonripetere(b,temp);
         if(find==false){
