@@ -1,16 +1,16 @@
-var a=[];
+var arrayprincipale=[];
 var i=0;
 while(i<16){
     var temp=Math.floor(Math.random()*100+1);
-    find=nonripetere(a,temp);
+    find=nonripetere(arrayprincipale,temp);
     if(find==true){
-        a.push(temp);
+        arrayprincipale.push(temp);
         i++;
     }
 }
-console.log(a);
+console.log(arrayprincipale);
 
-var b=[];
+var arraysecondario=[];
 i=0;
 var cont=0;
 var boom=false;
@@ -19,7 +19,7 @@ while(i<(100-16) && boom==false){
     
     //quando si va ad inserire più volte lo stesso numero ti ferma solo la prima volta e le altre ti lascia passare
     do{
-        find=nonripetere(b,temp);
+        find=nonripetere(arraysecondario,temp);
         if(find==false){
             temp=prompt("devi inserire un numero nuovo");
         }else if(temp>100 || temp<1){
@@ -28,16 +28,16 @@ while(i<(100-16) && boom==false){
         }
     }while(find==false);
     
-    find=nonripetere(a,temp);
+    find=nonripetere(arrayprincipale,temp);
     if(find==true){
-        b.push(temp);
+        arraysecondario.push(temp);
         cont++;
         i++;
     }else{
         boom=true;
     }
 }
-console.log(b);
+console.log(arraysecondario);
 console.log(cont);
 
 
