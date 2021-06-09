@@ -1,7 +1,23 @@
+var inizio=parseInt(prompt("seleziona difficolta 0=facile 1=normale 2=difficile"));
+var maxnum;
+switch(inizio){
+    case 0:
+        maxnum=100;
+        break;
+    case 1:
+        maxnum=80;
+        break;
+    case 2:
+        maxnum=50;
+        break;
+    default:
+        maxnum=100;
+}
+console.log(maxnum);
 var arrayprincipale=[];
 var i=0;
 while(i<16){
-    var temp=Math.floor(Math.random()*100+1);
+    var temp=Math.floor(Math.random()*maxnum+1);
     find=nonripetere(arrayprincipale,temp);
     if(find==true){
         arrayprincipale.push(temp);
@@ -14,7 +30,7 @@ var arraysecondario=[];
 i=0;
 var cont=0;
 var boom=false;
-while(i<(100-16) && boom==false){
+while(i<(maxnum-16) && boom==false){
     var temp= prompt("inserisci un nuovo numero")
     
     //quando si va ad inserire più volte lo stesso numero ti ferma solo la prima volta e le altre ti lascia passare
@@ -22,7 +38,7 @@ while(i<(100-16) && boom==false){
         find=nonripetere(arraysecondario,temp);
         if(find==false){
             temp=prompt("devi inserire un numero nuovo");
-        }else if(temp>100 || temp<1){
+        }else if(temp>maxnum || temp<1){
             temp=prompt("devi inserire un numero nuovo");
             find=false;
         }
