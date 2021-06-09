@@ -12,6 +12,7 @@ switch(inizio){
         break;
     default:
         maxnum=100;
+        inizio=0;
 }
 console.log(maxnum);
 var arrayprincipale=[];
@@ -53,8 +54,12 @@ while(i<(maxnum-16) && boom==false){
         boom=true;
     }
 }
-console.log(arraysecondario);
-console.log(cont);
+document.getElementById("mynumeri").innerHTML="i tuoi numeri inseriti sono="+arraysecondario;
+document.getElementById("punteggio").innerHTML="il tuo punteggio è="+(cont*(1+inizio));
+
+if(boom){
+    document.getElementById("imgboom").className="show";
+}
 
 
 

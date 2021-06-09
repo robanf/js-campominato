@@ -1,0 +1,17 @@
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+    margin:60px auto;
+}
+
+.centro{
+    text-align: center;
+    background-color: brown;
+    font-size: 20px;
+    padding-top: 30px;
+}
+
